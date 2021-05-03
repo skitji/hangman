@@ -13,8 +13,6 @@
             <button *ngIf="this.word != undefined" (click)="reset()" [class.big]="word.isFinished()"><mat-icon>refresh</mat-icon></button>
             <button *ngIf="this.word != undefined" (click)="jumpHistory(true)" [disabled]="currentHistoryIndex >= history.length - 1"><mat-icon>arrow_forward</mat-icon></button>
         </div>
-        
-        <!--<button (click)="out()" class="reset"><mat-icon>fingerprint</mat-icon></button>-->
 </div>
 <p class="version">Beta 1.2.1</p>
 </div>
