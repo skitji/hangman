@@ -1,0 +1,32 @@
+.content
+    margin: 20px 0 0 0
+    height: 150px
+    width: 300px
+    position: relative
+    overflow: hidden
+    .cover
+        height: 100%
+        position: absolute
+        top: 0
+        width: 100px
+        &.left
+            left: 0
+            background: linear-gradient(90deg, rgba(30,30,35,1) 0%, rgba(30,30,35,0.5) 100%)
+        &.right
+            right: 0
+            background: linear-gradient(90deg, rgba(30,30,35,0.5) 0%,rgba(30,30,35,1) 100%)
+    .possible-letters 
+        display: flex
+        height: 100%
+        position: absolute
+        left: 450px
+        transition: all 1000ms cubic-bezier(0, 0.84, 0.25, 1.06)
+        div
+            width: 100px
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 100px
+            color: #fff
+            user-select: none

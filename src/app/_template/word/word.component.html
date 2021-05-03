@@ -1,0 +1,13 @@
+<div class="container" [ngStyle]="{'width.px': fullWidth,'height.px':height + 40}">
+    <button (click)="setOffset(true)" *ngIf="lettersPerView <= wordAsArray.length" [class.disabled]="offset == 0" [ngStyle]="{'height.px':height}">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="word" [ngStyle]="{'width.px': innerWidth}">
+        <div class="array" [ngStyle]="{'left.px': -offset}">
+            <app-letter [ngStyle]="{'width.px': letterWidth}" *ngFor="let letter of this.wordAsArray; index as i" [letter]=letter [index]="i" [finished]="finished" [height]="height" (setLetter)="addLetter($event)"></app-letter>
+        </div>
+    </div>
+    <button (click)="setOffset(false)" *ngIf="lettersPerView <= wordAsArray.length" [class.disabled]="offset == maxOffset" [ngStyle]="{'height.px':height}">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+</div>

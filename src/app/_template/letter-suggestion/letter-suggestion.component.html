@@ -1,0 +1,9 @@
+<div class="content">
+    
+    <div class="possible-letters" [ngStyle]="{'left.px': offset}">
+        <div *ngFor="let letter of possibleLetters"><p>{{letter.toUpperCase()}}</p></div>
+    </div>
+    <div class="left cover"></div>
+    <div class="right cover"></div>
+    
+</div>

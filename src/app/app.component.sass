@@ -1,0 +1,66 @@
+.container
+    display: flex
+    justify-content: center
+    align-items: center 
+    flex-direction: column
+    width: 100%
+    height: 100%
+
+.version
+    color: #00a5ff
+    position: absolute
+    right: 20px
+    bottom: 20px
+    font-size: 20px
+
+.history
+    position: relative
+    app-history-view
+        position: absolute
+        bottom: 30px
+        transform: translateX(-50%)
+        transition: all 200ms
+        box-shadow: none
+        z-index: 10
+        &:hover
+            cursor: default
+    &:hover app-history-view
+        transform: translate(calc(-50% - 2px), -2px)
+        
+    
+
+.control
+    div
+        display: flex
+        justify-content: center
+    button
+        background-color: #00a5ff
+        color: #fff
+        height: 50px
+        border: none
+        box-shadow: 2px 2px 0px 0px #289FED, 4px 4px 0px 0px #5FB8FF, 6px 6px 0px 0px #A1D8FF
+        transition: all 200ms
+        margin: 10px
+        outline: none
+        width: 50px  
+        &.newLetter, &.big
+            width: 260px
+        &:disabled
+            background-color: #999
+            box-shadow: 2px 2px 0px 0px #474747, 4px 4px 0px 0px #777777, 6px 6px 0px 0px #CCCCCC
+            transition: all 300ms
+            &:hover
+                box-shadow: 2px 2px 0px 0px #474747, 4px 4px 0px 0px #777777, 6px 6px 0px 0px #CCCCCC
+                transform: translate(0px, 0px)
+                cursor: not-allowed
+        &:hover 
+            transform: translate(2px,2px)
+            cursor: pointer
+            box-shadow: 2px 2px 0px 0px #289FED, 4px 4px 0px 0px #5FB8FF, 4px 4px 0px 0px #A1D8FF
+
+
+    
+    
+    
+    
+    

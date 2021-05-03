@@ -1,0 +1,9 @@
+<div class="container" *ngIf="!started">
+    <div class="number" (window:scroll)="console.log(event)"><p>{{wordLength.toString().split('').length > 1 ? wordLength.toString().split('')[0] : 0}}</p></div>
+    <div class="number"><p>{{wordLength.toString().split('').length > 1 ? wordLength.toString().split('')[1] : wordLength.toString().split('')[0]}}</p></div>
+    <div class="buttons">
+        <button type="button"  (click)="add(1)" [class.disabled]="wordLength >= 17"  [disabled]="wordLength >= 17"><mat-icon>add</mat-icon></button>
+        <button type="button"  (click)="add(-1)" [class.disabled]="wordLength <= 0"  [disabled]="wordLength <= 0" ><mat-icon>remove</mat-icon></button>
+        <button [class.disabled]="wordLength <= 0 || wordLength > 17" (click)="start()"><mat-icon>done</mat-icon></button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <app-length-selection *ngIf="this.word == undefined" (startEvent)="start($event)"></app-length-selection>
+    <app-hangman-pic *ngIf="this.word != undefined" [failedAttempts]=word.getFailedAttempts()></app-hangman-pic>
+    <app-letter-suggestion *ngIf="this.word != undefined && !word.isFinished()" [possibleLetters]="possibleLetters" [mostLetter]="word.getMostLetter()"></app-letter-suggestion>
+    <app-word *ngIf="this.word != undefined" (setLetter)="addLetter($event)" [wordAsArray]="this.word.getNameArray()" [finished]="word.isFinished()"></app-word>
+    <div class="control">
+        <div>
+            <button alt="test" *ngIf="this.word != undefined  && !word.isFinished()" (click)="newLetter()" class="newLetter"><mat-icon>{{(included) ? 'done' : 'close'}}</mat-icon></button>
+        </div>
+        <div>
+            <button *ngIf="this.word != undefined" (click)="jumpHistory(false)" [disabled]="currentHistoryIndex <= 0"><mat-icon>arrow_back</mat-icon></button>
+            <button *ngIf="this.word != undefined" [disabled]="history.length <= 1" class="history" (click)="toggleHistoryView()"><mat-icon>history</mat-icon> <app-history-view [show]="historyView"></app-history-view></button>
+            <button *ngIf="this.word != undefined" (click)="reset()" [class.big]="word.isFinished()"><mat-icon>refresh</mat-icon></button>
+            <button *ngIf="this.word != undefined" (click)="jumpHistory(true)" [disabled]="currentHistoryIndex >= history.length - 1"><mat-icon>arrow_forward</mat-icon></button>
+        </div>
+        
+        <!--<button (click)="out()" class="reset"><mat-icon>fingerprint</mat-icon></button>-->
+</div>
+<p class="version">Beta 1.2.1</p>
+</div>
+

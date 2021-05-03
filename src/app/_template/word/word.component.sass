@@ -1,0 +1,38 @@
+.container
+    position: relative
+    display: flex
+    margin: 30px
+    //height: 250px
+    button
+        width: 50px
+        margin: 10px
+        height: 200px
+        background-color: #00a5ff
+        color: #fff
+        box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF
+        cursor: pointer
+        border: none
+        outline: none
+        transition: background-color box-shadow 300ms
+        &:hover
+            transition: all 100ms
+            box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 10px 10px 0px 0px #A1D8FF
+            transform: translate(5px, 5px)
+        &.disabled
+            background-color: #999
+            box-shadow: 5px 5px 0px 0px #474747, 10px 10px 0px 0px #777777, 15px 15px 0px 0px #CCCCCC
+            
+            &:hover
+                box-shadow: 5px 5px 0px 0px #474747, 10px 10px 0px 0px #777777, 15px 15px 0px 0px #CCCCCC
+                transform: translate(0px, 0px)
+                cursor: not-allowed
+    .word
+        overflow: hidden
+        position: relative
+        .array
+            display: flex
+            position: absolute
+            transition: all 500ms
+            
+            
+        

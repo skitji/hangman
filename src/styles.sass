@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+$primary: #00a5ff
+$secondary: #1e1e23
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Original+Surfer&display=swap')
+
+* 
+    padding: 0
+    margin: 0
+    border-radius: 5px
+
+p, mat-icon
+    text-shadow: 2px 2px 3px #000000
+html, body
+    background-color: $secondary
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    font-family: 'Courier Prime', monospace
+    font-family: 'Original Surfer', cursive
+    app-root
+        width: calc(100% - 40px)
+        height: calc(100% - 40px)
+        margin: 20px
+
+.toast-container
+    margin: 20px
+    position: relative
+    //background-color: #ff0000
+    .toast-success
+        background-color: #00a5ff
+        box-shadow: 2px 2px 0px 0px #289FED, 4px 4px 0px 0px #5FB8FF, 6px 6px 0px 0px #A1D8FF
+        padding: 10px 50px 10px 20px
+        color: #fff
+        &:hover
+            box-shadow: 2px 2px 0px 0px #289FED, 4px 4px 0px 0px #5FB8FF, 4px 4px 0px 0px #A1D8FF
+            transform: translate(2px,2px)
+    .toast-close-button
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+        background-color: #00a5ff
+        font-size: 25px
+        cursor: pointer
+        outline: none
+        color: #fff
+        &:hover
+            color: #999
+
+.toast-top-right
+    position: fixed
+    top: 0
+    right: 0

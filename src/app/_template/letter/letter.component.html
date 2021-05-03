@@ -1,0 +1,4 @@
+<div (click)="addLetter()" [class.filled]="letter != '_'" [class.finished]="finished" [ngStyle]="{'height.px': height}">
+    <p class="letter" [ngStyle]="{'animation-delay': index * 100 + 'ms', 'font-size.px': (height > 175) ? 70 : 30}">{{letter.toUpperCase()}}</p>
+    <p class="index">{{index + 1}}</p>
+</div>
