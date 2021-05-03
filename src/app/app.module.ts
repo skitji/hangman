@@ -13,7 +13,6 @@ import { HangmanPicComponent } from './_template/hangman-pic/hangman-pic.compone
 import { WordComponent } from './_template/word/word.component';
 import { LengthSelection } from './_template/length-selection/length-selection.component';
 import { ToastrModule } from 'ngx-toastr';
-import { HistoryViewComponent } from './_template/history-view/history-view.component';
 
 
 @NgModule({
@@ -24,7 +23,6 @@ import { HistoryViewComponent } from './_template/history-view/history-view.comp
     LetterSuggestionComponent,
     HangmanPicComponent,
     WordComponent,
-    HistoryViewComponent,
   ],
   imports: [
     BrowserModule,
