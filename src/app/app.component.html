@@ -9,7 +9,7 @@
         </div>
         <div>
             <button *ngIf="this.word != undefined" (click)="jumpHistory(false)" [disabled]="currentHistoryIndex <= 0"><mat-icon>arrow_back</mat-icon></button>
-            <button *ngIf="this.word != undefined" [disabled]="history.length <= 1" class="history" (click)="toggleHistoryView()"><mat-icon>history</mat-icon> <app-history-view [show]="historyView"></app-history-view></button>
+            <button *ngIf="this.word != undefined" [disabled]="history.length <= 1" class="history" (click)="toggleHistoryView()"><mat-icon>history</mat-icon></button>
             <button *ngIf="this.word != undefined" (click)="reset()" [class.big]="word.isFinished()"><mat-icon>refresh</mat-icon></button>
             <button *ngIf="this.word != undefined" (click)="jumpHistory(true)" [disabled]="currentHistoryIndex >= history.length - 1"><mat-icon>arrow_forward</mat-icon></button>
         </div>

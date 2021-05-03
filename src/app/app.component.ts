@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { ApiData } from './_interfaces/api-data';
 import { WordData } from './_interfaces/word-data';
 import { ApiService } from './_service/api.service';
@@ -129,28 +127,12 @@ export class AppComponent {
   }
 
   /**
-   * Toggles history view
-   */
-  public toggleHistoryView = (): void => {
-    this.historyView = !this.historyView;
-  }
-
-  /**
    * Only use for tests
    * @param api ApiService for getting word data
    */
   constructor(
     private api: ApiService
   ) {
-    this.start(5);
-    /*
-    this.toastr.success("Hallo ich bin der josch", "ICH!", {
-      progressBar: true,
-      toastClass: "toast-center-center",
-      timeOut: 6000000,
-      closeButton: true
-    })
-    */
   }
 
 }
