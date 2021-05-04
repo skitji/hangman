@@ -1,6 +1,6 @@
 # Hangman
 
-Example: https://hangman.skitji.de
+Example: http://hangman.skitji.de
 
 ## Development server
 
